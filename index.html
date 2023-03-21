@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <img onclick="Executar('m');" src="imgs/apple.png" width="100px">
+    <img onclick="Executar('u');" src="imgs/grape.png" width="100px">
+    <img onclick="Executar('b');" src="imgs/banana.png" width="100px"> <br>
+
+    <button onclick="Limpar();">LIMPAR</button> <br>
+
+    <div class="maca" id="maca"></div>
+    <div class="uva" id="uva"></div>
+    <div class="banana" id="banana"></div>
+
+</body>
+    <script>
+        function Executar(letra){
+            if(letra == 'm'){
+            maca.innerHTML += "<img src='imgs/apple.png' width='80px'> <br>";
+            }
+            if(letra == 'u'){
+            uva.innerHTML += "<img src='imgs/grape.png' width='80px'> <br>";
+            }
+            if(letra == 'b'){
+            banana.innerHTML += "<img src='imgs/banana.png' width='80px'> <br>";
+            }
+        }
+
+        function Limpar(){
+            banana.innerHTML = "";
+            uva.innerHTML = "";
+            maca.innerHTML = "";
+
+        }
+    </script>
+</html>
