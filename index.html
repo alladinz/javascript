@@ -9,27 +9,49 @@
 
 </head>
 <body>
-    <img onclick="Executar('m');" src="imgs/apple.png" width="100px">
-    <img onclick="Executar('u');" src="imgs/grape.png" width="100px">
-    <img onclick="Executar('b');" src="imgs/banana.png" width="100px"> <br>
+    <img class="macaphoto" onclick="Executar('m');" src="imgs/apple.png" width="100px">
+    <img class="uvaphoto" onclick="Executar('u');" src="imgs/grape.png" width="100px">
+    <img class="bananaphoto" onclick="Executar('b');" src="imgs/banana.png" width="100px"> <br>
 
-    <button onclick="Limpar();">LIMPAR</button> <br>
+    <button onclick="Limpar();">LIMPAR</button> <br><br><br>
 
+    <div class="cont_maca">
+    TOTAL DE MAÇÃS: <span id="total_maca"> 0 </span>
     <div class="maca" id="maca"></div>
+    </div>
+
+    <br><br>
+    <div class="cont_uva">
+    TOTAL DE UVAS: <span id="total_uva"> 0 </span>
     <div class="uva" id="uva"></div>
+    </div>
+
+    <br><br>
+    <div class="cont_banana">
+    TOTAL DE BANANAS: <span id="total_banana"> 0 </span>
     <div class="banana" id="banana"></div>
+    </div>
 
 </body>
     <script>
+        m = 0;
+        b = 0;
+        u = 0;
         function Executar(letra){
             if(letra == 'm'){
-            maca.innerHTML += "<img src='imgs/apple.png' width='80px'> <br>";
+            m = m + 1;
+            total_maca.innerHTML = m;
+            maca.innerHTML += "<img src='imgs/apple.png' width='80px'>";
             }
             if(letra == 'u'){
-            uva.innerHTML += "<img src='imgs/grape.png' width='80px'> <br>";
+            u = u + 1;
+            total_uva.innerHTML = u;
+            uva.innerHTML += "<img src='imgs/grape.png' width='80px'>";
             }
             if(letra == 'b'){
-            banana.innerHTML += "<img src='imgs/banana.png' width='80px'> <br>";
+            b = b + 1;
+            total_banana.innerHTML = b;
+            banana.innerHTML += "<img src='imgs/banana.png' width='80px'>";
             }
         }
 
@@ -37,7 +59,12 @@
             banana.innerHTML = "";
             uva.innerHTML = "";
             maca.innerHTML = "";
-
+            total_maca.innerHTML = 0;
+            total_uva.innerHTML = 0;
+            total_banana.innerHTML = 0;
+            m = 0;
+            b = 0;
+            u = 0;
         }
     </script>
 </html>
